@@ -127,7 +127,7 @@ export default function ManualEntry() {
         <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
           <div className="flex items-center justify-between mb-6">
             <div>
-              <h1 className="text-xl font-bold text-gray-800">手工录入</h1>
+              <h1 className="text-xl font-bold text-gray-800">手工录入（宏奥）</h1>
               <p className="text-sm text-gray-500 mt-1">录入能源每日数据</p>
             </div>
             <button

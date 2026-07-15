@@ -36,7 +36,7 @@ export const menuData: MenuItem[] = [
     hasContent: true,
     children: [
       { id: 'report-energy', name: '用能报表', path: '/report/energy', icon: 'BarChart3', hasContent: true },
-      { id: 'report-manual', name: '手工录入', path: '/report/manual', icon: 'Edit3', hasContent: true }
+      { id: 'report-manual', name: '手工录入（宏奥）', path: '/report/manual', icon: 'Edit3', hasContent: true }
     ]
   },
   {
