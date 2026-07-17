@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Search, RotateCcw, AlertTriangle, History, CheckCircle, Clock, Send, XCircle, RefreshCw } from 'lucide-react';
+import { Search, RotateCcw, AlertTriangle, History, CheckCircle, Clock, Send, XCircle } from 'lucide-react';
 
 interface AlarmItem {
   id: string;
@@ -370,85 +370,85 @@ export default function AlarmData() {
           </div>
 
           <div className="overflow-x-auto">
-            <table className="w-full text-sm">
+            <table className="w-full text-sm min-w-[1800px]">
               <thead>
                 <tr className="bg-gray-100">
-                  <th className="px-4 py-3 text-center w-12">
+                  <th className="px-3 py-3 text-center w-10 whitespace-nowrap">
                     <input type="checkbox" className="rounded border-gray-300" />
                   </th>
-                  <th className="px-4 py-3 text-center font-semibold text-gray-700">序号</th>
-                  <th className="px-4 py-3 text-center font-semibold text-gray-700">告警时间</th>
+                  <th className="px-3 py-3 text-center font-semibold text-gray-700 whitespace-nowrap">序号</th>
+                  <th className="px-3 py-3 text-center font-semibold text-gray-700 whitespace-nowrap">告警时间</th>
                   {activeTab === 'history' && (
-                    <th className="px-4 py-3 text-center font-semibold text-gray-700">恢复时间</th>
+                    <th className="px-3 py-3 text-center font-semibold text-gray-700 whitespace-nowrap">恢复时间</th>
                   )}
-                  <th className="px-4 py-3 text-center font-semibold text-gray-700">告警名称</th>
-                  <th className="px-4 py-3 text-center font-semibold text-gray-700">告警类型</th>
-                  <th className="px-4 py-3 text-center font-semibold text-gray-700">告警级别</th>
-                  <th className="px-4 py-3 text-center font-semibold text-gray-700">能源类型</th>
-                  <th className="px-4 py-3 text-center font-semibold text-gray-700">告警位置</th>
-                  <th className="px-4 py-3 text-left font-semibold text-gray-700">告警描述</th>
-                  <th className="px-4 py-3 text-center font-semibold text-gray-700">推送人员</th>
-                  <th className="px-4 py-3 text-center font-semibold text-gray-700">推送状态</th>
+                  <th className="px-3 py-3 text-center font-semibold text-gray-700 whitespace-nowrap">告警名称</th>
+                  <th className="px-3 py-3 text-center font-semibold text-gray-700 whitespace-nowrap">告警类型</th>
+                  <th className="px-3 py-3 text-center font-semibold text-gray-700 whitespace-nowrap">告警级别</th>
+                  <th className="px-3 py-3 text-center font-semibold text-gray-700 whitespace-nowrap">能源类型</th>
+                  <th className="px-3 py-3 text-center font-semibold text-gray-700 whitespace-nowrap">告警位置</th>
+                  <th className="px-3 py-3 text-left font-semibold text-gray-700 whitespace-nowrap">告警描述</th>
+                  <th className="px-3 py-3 text-center font-semibold text-gray-700 whitespace-nowrap">推送人员</th>
+                  <th className="px-3 py-3 text-center font-semibold text-gray-700 whitespace-nowrap">推送状态</th>
                   {activeTab === 'history' && (
-                    <th className="px-4 py-3 text-center font-semibold text-gray-700">告警状态</th>
-                  )}
-                  {activeTab === 'history' && (
-                    <th className="px-4 py-3 text-center font-semibold text-gray-700">确认时间</th>
+                    <th className="px-3 py-3 text-center font-semibold text-gray-700 whitespace-nowrap">告警状态</th>
                   )}
                   {activeTab === 'history' && (
-                    <th className="px-4 py-3 text-center font-semibold text-gray-700">确认人</th>
+                    <th className="px-3 py-3 text-center font-semibold text-gray-700 whitespace-nowrap">确认时间</th>
+                  )}
+                  {activeTab === 'history' && (
+                    <th className="px-3 py-3 text-center font-semibold text-gray-700 whitespace-nowrap">确认人</th>
                   )}
                   {activeTab === 'realtime' && (
-                    <th className="px-4 py-3 text-center font-semibold text-gray-700">操作</th>
+                    <th className="px-3 py-3 text-center font-semibold text-gray-700 whitespace-nowrap">操作</th>
                   )}
                 </tr>
               </thead>
               <tbody>
                 {alarmData.map((item) => (
                   <tr key={item.id} className="border-b border-gray-100 hover:bg-gray-50">
-                    <td className="px-4 py-3 text-center">
+                    <td className="px-3 py-3 text-center whitespace-nowrap">
                       <input type="checkbox" className="rounded border-gray-300" />
                     </td>
-                    <td className="px-4 py-3 text-center text-gray-600">{item.index}</td>
-                    <td className="px-4 py-3 text-center text-gray-600">{item.alarmTime}</td>
+                    <td className="px-3 py-3 text-center text-gray-600 whitespace-nowrap">{item.index}</td>
+                    <td className="px-3 py-3 text-center text-gray-600 whitespace-nowrap">{item.alarmTime}</td>
                     {activeTab === 'history' && (
-                      <td className="px-4 py-3 text-center text-gray-600">{item.recoverTime}</td>
+                      <td className="px-3 py-3 text-center text-gray-600 whitespace-nowrap">{item.recoverTime}</td>
                     )}
-                    <td className="px-4 py-3 text-center text-gray-800 font-medium">{item.alarmName}</td>
-                    <td className="px-4 py-3 text-center text-gray-600">{item.alarmType}</td>
-                    <td className="px-4 py-3 text-center">
+                    <td className="px-3 py-3 text-center text-gray-800 font-medium whitespace-nowrap">{item.alarmName}</td>
+                    <td className="px-3 py-3 text-center text-gray-600 whitespace-nowrap">{item.alarmType}</td>
+                    <td className="px-3 py-3 text-center whitespace-nowrap">
                       <span className={`px-2 py-1 rounded text-xs font-medium ${getLevelClass(item.alarmLevel)}`}>
                         {getLevelText(item.alarmLevel)}
                       </span>
                     </td>
-                    <td className="px-4 py-3 text-center text-gray-600">{item.energyType}</td>
-                    <td className="px-4 py-3 text-center text-gray-600">{item.alarmLocation}</td>
-                    <td className="px-4 py-3 text-left text-gray-600 max-w-[280px] truncate" title={item.alarmDesc}>
+                    <td className="px-3 py-3 text-center text-gray-600 whitespace-nowrap">{item.energyType}</td>
+                    <td className="px-3 py-3 text-center text-gray-600 whitespace-nowrap">{item.alarmLocation}</td>
+                    <td className="px-3 py-3 text-left text-gray-600 whitespace-nowrap max-w-[320px]" title={item.alarmDesc}>
                       {item.alarmDesc}
                     </td>
-                    <td className="px-4 py-3 text-center text-gray-600">{item.pushPerson}</td>
-                    <td className="px-4 py-3 text-center">
-                      <span className={`px-2 py-1 rounded text-xs font-medium flex items-center justify-center gap-1 ${getPushStatusClass(item.pushStatus)}`}>
+                    <td className="px-3 py-3 text-center text-gray-600 whitespace-nowrap">{item.pushPerson}</td>
+                    <td className="px-3 py-3 text-center whitespace-nowrap">
+                      <span className={`px-2 py-1 rounded text-xs font-medium inline-flex items-center gap-1 ${getPushStatusClass(item.pushStatus)}`}>
                         {item.pushStatus === 'success' ? <Send className="w-3 h-3" /> : <XCircle className="w-3 h-3" />}
                         {getPushStatusText(item.pushStatus)}
                       </span>
                     </td>
                     {activeTab === 'history' && (
-                      <td className="px-4 py-3 text-center">
-                        <span className={`px-2 py-1 rounded text-xs font-medium flex items-center justify-center gap-1 ${getStatusClass(item.status)}`}>
+                      <td className="px-3 py-3 text-center whitespace-nowrap">
+                        <span className={`px-2 py-1 rounded text-xs font-medium inline-flex items-center gap-1 ${getStatusClass(item.status)}`}>
                           {item.status === 'alarm' ? <Clock className="w-3 h-3" /> : <CheckCircle className="w-3 h-3" />}
                           {getStatusText(item.status)}
                         </span>
                       </td>
                     )}
                     {activeTab === 'history' && (
-                      <td className="px-4 py-3 text-center text-gray-600">{item.confirmTime}</td>
+                      <td className="px-3 py-3 text-center text-gray-600 whitespace-nowrap">{item.confirmTime}</td>
                     )}
                     {activeTab === 'history' && (
-                      <td className="px-4 py-3 text-center text-gray-600">{item.confirmPerson}</td>
+                      <td className="px-3 py-3 text-center text-gray-600 whitespace-nowrap">{item.confirmPerson}</td>
                     )}
                     {activeTab === 'realtime' && (
-                      <td className="px-4 py-3 text-center">
+                      <td className="px-3 py-3 text-center whitespace-nowrap">
                         <div className="flex items-center justify-center gap-3">
                           {!item.confirmed && (
                             <button
@@ -459,13 +459,12 @@ export default function AlarmData() {
                             </button>
                           )}
                           {item.confirmed && (
-                            <span className="text-gray-400 text-sm">已确认</span>
+                            <span className="text-[#10469c] hover:text-[#0d3a80] text-sm font-medium">确认</span>
                           )}
                           <button
                             onClick={() => handleRetryPush(item.id)}
-                            className="text-[#10469c] hover:text-[#0d3a80] text-sm font-medium flex items-center gap-1"
+                            className="text-[#10469c] hover:text-[#0d3a80] text-sm font-medium"
                           >
-                            <RefreshCw className="w-3 h-3" />
                             重新推送
                           </button>
                         </div>
