@@ -15,8 +15,10 @@ import DeviceList from "@/pages/Device/DeviceList";
 import MeterManagement from "@/pages/Device/MeterManagement";
 import TagManagement from "@/pages/Device/TagManagement";
 import AlarmData from "@/pages/Alarm/AlarmData";
+import AlarmConfig from "@/pages/Alarm/AlarmConfig";
 import EnergyReport from "@/pages/Report/EnergyReport";
 import ManualEntry from "@/pages/Report/ManualEntry";
+import Cockpit from "@/pages/Cockpit";
 
 export default function App() {
   return (
@@ -25,6 +27,7 @@ export default function App() {
         <Route path="/" element={<Navigate to="/dashboard" replace />} />
         <Route element={<Layout />}>
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/cockpit" element={<Cockpit />} />
           <Route path="/electric/overview" element={<ElectricOverview />} />
           <Route path="/electric/yoy" element={<YoyAnalysis />} />
           <Route path="/electric/mom" element={<MomAnalysis />} />
@@ -39,6 +42,7 @@ export default function App() {
           <Route path="/device/meter" element={<MeterManagement />} />
           <Route path="/device/tag" element={<TagManagement />} />
           <Route path="/alarm/data" element={<AlarmData />} />
+          <Route path="/alarm/config" element={<AlarmConfig />} />
           <Route path="/report/energy" element={<EnergyReport />} />
           <Route path="/report/manual" element={<ManualEntry />} />
         </Route>

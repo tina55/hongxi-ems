@@ -8,102 +8,6 @@ export const treeData: TreeNode[] = [
     parentId: null,
     children: [
       {
-        id: 'workshop-1',
-        name: '涂装车间',
-        type: 'workshop',
-        parentId: 'factory-1',
-        children: [
-          {
-            id: 'coating-primer',
-            name: '底漆线体',
-            type: 'equipment',
-            parentId: 'workshop-1',
-            children: [
-              {
-                id: 'primer-refrigerator',
-                name: '制冷机控制柜（TZZLJ12）',
-                type: 'meter',
-                meterType: 'electric',
-                parentId: 'coating-primer',
-                children: []
-              },
-              {
-                id: 'primer-purewater',
-                name: '纯水控制柜（TZCS07）',
-                type: 'meter',
-                meterType: 'electric',
-                parentId: 'coating-primer',
-                children: []
-              }
-            ]
-          },
-          {
-            id: 'coating-topcoat',
-            name: '面漆线',
-            type: 'equipment',
-            parentId: 'workshop-1',
-            children: [
-              {
-                id: 'topcoat-ac1',
-                name: '二楼喷漆室空调',
-                type: 'meter',
-                meterType: 'electric',
-                parentId: 'coating-topcoat',
-                children: []
-              },
-              {
-                id: 'topcoat-ac2',
-                name: '二楼调漆间空调',
-                type: 'meter',
-                meterType: 'electric',
-                parentId: 'coating-topcoat',
-                children: []
-              },
-              {
-                id: 'topcoat-rto',
-                name: 'RTO动力控制柜',
-                type: 'meter',
-                meterType: 'electric',
-                parentId: 'coating-topcoat',
-                children: []
-              }
-            ]
-          },
-          {
-            id: 'meter-water-2',
-            name: '涂装车间水表',
-            type: 'meter',
-            meterType: 'water',
-            parentId: 'workshop-1',
-            children: []
-          },
-          {
-            id: 'meter-gas-2',
-            name: '涂装车间天然气表',
-            type: 'meter',
-            meterType: 'gas',
-            parentId: 'workshop-1',
-            children: []
-          },
-          {
-            id: 'meter-compressed-air-1',
-            name: '涂装车间压缩空气表',
-            type: 'meter',
-            meterType: 'compressedAir',
-            parentId: 'workshop-1',
-            children: []
-          },
-          {
-            id: 'meter-heat-1',
-            name: '涂装车间热量表',
-            type: 'meter',
-            meterType: 'heat',
-            parentId: 'workshop-1',
-            children: []
-          }
-        ]
-      },
-      {
         id: 'workshop-2',
         name: '数控车间',
         type: 'workshop',
@@ -256,62 +160,6 @@ export const treeData: TreeNode[] = [
         ]
       },
       {
-        id: 'workshop-6',
-        name: 'V80车间',
-        type: 'workshop',
-        parentId: 'factory-1',
-        children: [
-          {
-            id: 'v80-control',
-            name: '控制配电柜（三岛区域）',
-            type: 'equipment',
-            parentId: 'workshop-6',
-            children: [
-              {
-                id: 'v80-control-meter',
-                name: '三岛区域电表',
-                type: 'meter',
-                meterType: 'electric',
-                parentId: 'v80-control',
-                children: []
-              }
-            ]
-          },
-          {
-            id: 'v80-welding',
-            name: '焊接电配电柜（货箱区）',
-            type: 'equipment',
-            parentId: 'workshop-6',
-            children: [
-              {
-                id: 'v80-welding-meter',
-                name: '货箱区电表',
-                type: 'meter',
-                meterType: 'electric',
-                parentId: 'v80-welding',
-                children: []
-              }
-            ]
-          },
-          {
-            id: 'meter-compressed-air-4',
-            name: 'V80车间压缩空气表',
-            type: 'meter',
-            meterType: 'compressedAir',
-            parentId: 'workshop-6',
-            children: []
-          },
-          {
-            id: 'meter-argon-1',
-            name: 'V80车间氩气表',
-            type: 'meter',
-            meterType: 'argon',
-            parentId: 'workshop-6',
-            children: []
-          }
-        ]
-      },
-      {
         id: 'workshop-7',
         name: '集成车间',
         type: 'workshop',
@@ -363,6 +211,158 @@ export const treeData: TreeNode[] = [
             type: 'meter',
             meterType: 'argon',
             parentId: 'workshop-7',
+            children: []
+          }
+        ]
+      },
+      {
+        id: 'workshop-1',
+        name: '涂装车间',
+        type: 'workshop',
+        parentId: 'factory-1',
+        children: [
+          {
+            id: 'coating-primer',
+            name: '底漆线体',
+            type: 'equipment',
+            parentId: 'workshop-1',
+            children: [
+              {
+                id: 'primer-refrigerator',
+                name: '制冷机控制柜（TZZLJ12）',
+                type: 'meter',
+                meterType: 'electric',
+                parentId: 'coating-primer',
+                children: []
+              },
+              {
+                id: 'primer-purewater',
+                name: '纯水控制柜（TZCS07）',
+                type: 'meter',
+                meterType: 'electric',
+                parentId: 'coating-primer',
+                children: []
+              }
+            ]
+          },
+          {
+            id: 'coating-topcoat',
+            name: '面漆线',
+            type: 'equipment',
+            parentId: 'workshop-1',
+            children: [
+              {
+                id: 'topcoat-ac1',
+                name: '二楼喷漆室空调',
+                type: 'meter',
+                meterType: 'electric',
+                parentId: 'coating-topcoat',
+                children: []
+              },
+              {
+                id: 'topcoat-ac2',
+                name: '二楼调漆间空调',
+                type: 'meter',
+                meterType: 'electric',
+                parentId: 'coating-topcoat',
+                children: []
+              },
+              {
+                id: 'topcoat-rto',
+                name: 'RTO动力控制柜',
+                type: 'meter',
+                meterType: 'electric',
+                parentId: 'coating-topcoat',
+                children: []
+              }
+            ]
+          },
+          {
+            id: 'meter-water-2',
+            name: '涂装车间水表',
+            type: 'meter',
+            meterType: 'water',
+            parentId: 'workshop-1',
+            children: []
+          },
+          {
+            id: 'meter-gas-2',
+            name: '涂装车间天然气表',
+            type: 'meter',
+            meterType: 'gas',
+            parentId: 'workshop-1',
+            children: []
+          },
+          {
+            id: 'meter-compressed-air-1',
+            name: '涂装车间压缩空气表',
+            type: 'meter',
+            meterType: 'compressedAir',
+            parentId: 'workshop-1',
+            children: []
+          },
+          {
+            id: 'meter-heat-1',
+            name: '涂装车间热量表',
+            type: 'meter',
+            meterType: 'heat',
+            parentId: 'workshop-1',
+            children: []
+          }
+        ]
+      },
+      {
+        id: 'workshop-6',
+        name: 'V80车间',
+        type: 'workshop',
+        parentId: 'factory-1',
+        children: [
+          {
+            id: 'v80-control',
+            name: '控制配电柜（三岛区域）',
+            type: 'equipment',
+            parentId: 'workshop-6',
+            children: [
+              {
+                id: 'v80-control-meter',
+                name: '三岛区域电表',
+                type: 'meter',
+                meterType: 'electric',
+                parentId: 'v80-control',
+                children: []
+              }
+            ]
+          },
+          {
+            id: 'v80-welding',
+            name: '焊接电配电柜（货箱区）',
+            type: 'equipment',
+            parentId: 'workshop-6',
+            children: [
+              {
+                id: 'v80-welding-meter',
+                name: '货箱区电表',
+                type: 'meter',
+                meterType: 'electric',
+                parentId: 'v80-welding',
+                children: []
+              }
+            ]
+          },
+          {
+            id: 'meter-compressed-air-4',
+            name: 'V80车间压缩空气表',
+            type: 'meter',
+            meterType: 'compressedAir',
+            parentId: 'workshop-6',
+            children: []
+          },
+          {
+            id: 'meter-argon-1',
+            name: 'V80车间氩气表',
+            type: 'meter',
+            meterType: 'argon',
+            parentId: 'workshop-6',
             children: []
           }
         ]

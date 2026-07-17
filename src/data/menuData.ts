@@ -9,6 +9,13 @@ export const menuData: MenuItem[] = [
     hasContent: true
   },
   {
+    id: 'cockpit',
+    name: '能源驾驶舱',
+    icon: 'Monitor',
+    path: '/cockpit',
+    hasContent: true
+  },
+  {
     id: 'realtime',
     name: '实时数据',
     icon: 'BarChart2',
@@ -57,7 +64,8 @@ export const menuData: MenuItem[] = [
     path: '/alarm',
     hasContent: true,
     children: [
-      { id: 'alarm-data', name: '告警数据', path: '/alarm/data', icon: 'Bell', hasContent: true }
+      { id: 'alarm-data', name: '告警数据', path: '/alarm/data', icon: 'Bell', hasContent: true },
+      { id: 'alarm-config', name: '告警配置', path: '/alarm/config', icon: 'Settings', hasContent: true }
     ]
   },
   {

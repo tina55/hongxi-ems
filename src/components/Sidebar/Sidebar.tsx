@@ -14,6 +14,8 @@ import {
   Server,
   Tag,
   MoreHorizontal,
+  Monitor,
+  Gauge,
   type LucideIcon
 } from 'lucide-react';
 import { useMenuStore } from '@/store/menuStore';
@@ -34,6 +36,8 @@ const iconMap: Record<string, LucideIcon> = {
   Server,
   Tag,
   MoreHorizontal,
+  Monitor,
+  Gauge,
   BarChart2: BarChart3,
   TrendingUp: BarChart3,
   Activity: Zap,
