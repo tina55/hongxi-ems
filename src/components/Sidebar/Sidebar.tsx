@@ -16,6 +16,7 @@ import {
   MoreHorizontal,
   Monitor,
   Gauge,
+  History,
   type LucideIcon
 } from 'lucide-react';
 import { useMenuStore } from '@/store/menuStore';
@@ -38,6 +39,7 @@ const iconMap: Record<string, LucideIcon> = {
   MoreHorizontal,
   Monitor,
   Gauge,
+  History,
   BarChart2: BarChart3,
   TrendingUp: BarChart3,
   Activity: Zap,
@@ -56,6 +58,22 @@ export function Sidebar() {
   const navigate = useNavigate();
   const location = useLocation();
   const { activeMenuId, expandedMenuIds, setActiveMenu, toggleExpandMenu } = useMenuStore();
+
+  const getParentMenuIdByPath = (path: string): string | null => {
+    for (const menu of menuData) {
+      if (menu.children) {
+        for (const child of menu.children) {
+          if (child.path === path) {
+            return menu.id;
+          }
+        }
+      }
+      if (menu.path === path) {
+        return menu.id;
+      }
+    }
+    return null;
+  };
 
   const handleMenuClick = (menu: typeof menuData[0]) => {
     setActiveMenu(menu.id);
@@ -77,6 +95,8 @@ export function Sidebar() {
     }
   };
 
+  const currentParentId = getParentMenuIdByPath(location.pathname);
+
   return (
     <aside className="w-64 bg-[#10469c] flex flex-col h-screen">
       <div className="h-16 flex items-center px-5 border-b border-white/10">
@@ -93,7 +113,7 @@ export function Sidebar() {
           {menuData.map((menu) => {
             const Icon = iconMap[menu.icon] || LayoutDashboard;
             const isExpanded = expandedMenuIds.includes(menu.id);
-            const isActive = activeMenuId === menu.id || location.pathname.startsWith(menu.path);
+            const isActive = currentParentId === menu.id;
             const hasChildren = menu.children && menu.children.length > 0;
 
             return (

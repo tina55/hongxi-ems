@@ -9,6 +9,17 @@ export function Layout() {
   // 根据当前路径确定一级菜单ID
   const getCurrentMenuId = () => {
     const path = location.pathname;
+    // 优先精确匹配子菜单路径
+    for (const menu of menuData) {
+      if (menu.children) {
+        for (const child of menu.children) {
+          if (child.path === path) {
+            return menu.id;
+          }
+        }
+      }
+    }
+    // 再匹配一级菜单路径前缀
     for (const menu of menuData) {
       if (menu.path === path || path.startsWith(menu.path + '/')) {
         return menu.id;

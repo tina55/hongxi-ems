@@ -80,7 +80,7 @@ export default function TeamAnalysis() {
           <div className="bg-white rounded-xl border border-gray-200 p-6 shadow-sm">
             <div className="flex items-center justify-between mb-6">
               <div>
-                <h1 className="text-xl font-bold text-gray-800">班组能耗分析</h1>
+                <h1 className="text-xl font-bold text-gray-800">班组能耗分析2</h1>
                 <p className="text-sm text-gray-500 mt-1">按班组统计能耗数据</p>
               </div>
               <div className="text-sm text-gray-400">

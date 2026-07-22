@@ -19,8 +19,12 @@ export const menuData: MenuItem[] = [
     id: 'realtime',
     name: '实时数据',
     icon: 'BarChart2',
-    path: '/electric/overview',
-    hasContent: true
+    path: '/realtime',
+    hasContent: true,
+    children: [
+      { id: 'realtime-overview', name: '实时数据', path: '/electric/overview', icon: 'Activity', hasContent: true },
+      { id: 'realtime-history', name: '历史数据', path: '/realtime/history', icon: 'History', hasContent: true }
+    ]
   },
   {
     id: 'electric',
@@ -31,7 +35,8 @@ export const menuData: MenuItem[] = [
     children: [
       { id: 'electric-trend', name: '用能趋势', path: '/electric/trend', icon: 'LineChart', hasContent: true },
       { id: 'electric-yoymom', name: '同环比分析', path: '/electric/yoymom', icon: 'BarChart3', hasContent: true },
-      { id: 'statistics-team', name: '班组分析', path: '/statistics/team', icon: 'Users', hasContent: true },
+      { id: 'statistics-team-hongao', name: '班组分析（宏奥）', path: '/statistics/team-hongao', icon: 'Users', hasContent: true },
+      { id: 'statistics-team', name: '班组分析2', path: '/statistics/team', icon: 'Users', hasContent: true },
       { id: 'statistics-product', name: '单位能耗', path: '/statistics/product', icon: 'Package', hasContent: true }
     ]
   },

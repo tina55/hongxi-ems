@@ -544,7 +544,7 @@ export default function DeviceList() {
 
   return (
     <div className="min-h-screen bg-gray-50 p-6">
-      <div className="max-w-7xl mx-auto">
+      <div>
         <div className="bg-white rounded-xl border border-gray-200 shadow-sm">
           <div className="flex">
             {/* 左侧树 */}

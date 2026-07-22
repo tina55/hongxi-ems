@@ -7,6 +7,7 @@ import MomAnalysis from "@/pages/Electric/MomAnalysis";
 import Trend from "@/pages/Electric/Trend";
 import YoyMomAnalysis from "@/pages/Electric/YoyMomAnalysis";
 import TeamAnalysis from "@/pages/Statistics/TeamAnalysis";
+import TeamAnalysisHongao from "@/pages/Statistics/TeamAnalysisHongao";
 import ProductEnergy from "@/pages/Statistics/ProductEnergy";
 import ProcessEnergy from "@/pages/Statistics/ProcessEnergy";
 import ProcessEnergy2 from "@/pages/Statistics/ProcessEnergy2";
@@ -16,6 +17,7 @@ import MeterManagement from "@/pages/Device/MeterManagement";
 import TagManagement from "@/pages/Device/TagManagement";
 import AlarmData from "@/pages/Alarm/AlarmData";
 import AlarmConfig from "@/pages/Alarm/AlarmConfig";
+import HistoryData from "@/pages/Realtime/HistoryData";
 import EnergyReport from "@/pages/Report/EnergyReport";
 import ManualEntry from "@/pages/Report/ManualEntry";
 import Cockpit from "@/pages/Cockpit";
@@ -33,7 +35,9 @@ export default function App() {
           <Route path="/electric/mom" element={<MomAnalysis />} />
           <Route path="/electric/trend" element={<Trend />} />
           <Route path="/electric/yoymom" element={<YoyMomAnalysis />} />
+          <Route path="/realtime/history" element={<HistoryData />} />
           <Route path="/statistics/team" element={<TeamAnalysis />} />
+          <Route path="/statistics/team-hongao" element={<TeamAnalysisHongao />} />
           <Route path="/statistics/product" element={<ProductEnergy />} />
           <Route path="/statistics/process" element={<ProcessEnergy />} />
           <Route path="/statistics/process2" element={<ProcessEnergy2 />} />
