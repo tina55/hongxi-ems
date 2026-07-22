@@ -15,7 +15,8 @@ import DeviceGroup from "@/pages/Device/DeviceGroup";
 import DeviceList from "@/pages/Device/DeviceList";
 import MeterManagement from "@/pages/Device/MeterManagement";
 import TagManagement from "@/pages/Device/TagManagement";
-import AlarmData from "@/pages/Alarm/AlarmData";
+import RealtimeAlarm from "@/pages/Alarm/RealtimeAlarm";
+import HistoryAlarm from "@/pages/Alarm/HistoryAlarm";
 import AlarmConfig from "@/pages/Alarm/AlarmConfig";
 import HistoryData from "@/pages/Realtime/HistoryData";
 import EnergyReport from "@/pages/Report/EnergyReport";
@@ -45,7 +46,8 @@ export default function App() {
           <Route path="/device/list" element={<DeviceList />} />
           <Route path="/device/meter" element={<MeterManagement />} />
           <Route path="/device/tag" element={<TagManagement />} />
-          <Route path="/alarm/data" element={<AlarmData />} />
+          <Route path="/alarm/realtime" element={<RealtimeAlarm />} />
+          <Route path="/alarm/history" element={<HistoryAlarm />} />
           <Route path="/alarm/config" element={<AlarmConfig />} />
           <Route path="/report/energy" element={<EnergyReport />} />
           <Route path="/report/manual" element={<ManualEntry />} />
